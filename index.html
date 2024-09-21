@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form >
+            <div class="base">
+              <h4>Age Calculator Web App</h4>
+            </div>
+            <div class="block">
+                <p class="title">Day</p>
+                <input type="number" name="date" id="date" placeholder="dd" />
+            </div>
+            <div class="block">
+                <p class="title">Month</p>
+              <input type="number" name="month" id="month" placeholder="mm"/>
+            </div>
+            <div class="block">
+                <p class="title">Year</p>
+              <input type="number" name="year" id="year" placeholder="yyyy"/>
+            </div>
+            <div class="base">
+ 
+                <input type="button" name="submit" value="Submit" onclick="age()" />
+             
+              </div>
+              <div class="age" id="age"></div>
+          </form>
+    </div>
+    <script>
+
+function age() {
+    var y = document.getElementById('year').value;
+    var date = new Date().getFullYear(); // Call getFullYear() as a function
+
+    var age = date - y; // Make sure to declare the age variable with var, let, or const
+    document.getElementById('age').innerHTML = "Your Age is " + age; 
+}
+        
+    </script>
+</body>
+</html>
